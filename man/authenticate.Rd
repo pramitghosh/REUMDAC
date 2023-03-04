@@ -19,6 +19,9 @@ Consumer Key and Consumer Secret are available to authenticated users through
 EUMETSAT's EO Portal: https://api.eumetsat.int/api-key/.
 }
 \examples{
-authenticate("consumer_key_goes_here", "consumer_secret_goes_here")
+if(FALSE)
+{
+  authenticate("consumer_key_goes_here", "consumer_secret_goes_here")
+}
 
 }
