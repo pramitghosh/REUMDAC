@@ -1,11 +1,15 @@
 Package: REUMDAC
-Type: Package
-Title: R Client interfacing EUMETSAT's Data Access Services
+Title: R Client Interfacing EUMETSAT's Data Access Services
 Version: 0.1.0
-Authors@R: person("Pramit", "Ghosh", email = "pramit.ghosh@external.eumetsat.int", 
-  role = c("aut", "cre"), comment = c(ORCID = "0000-0002-1852-5951"))
-Maintainer: Pramit Ghosh <pramit.ghosh@external.eumetsat.int>
-Description: This package acts as an R client for interacting with EUMETSAT's Data Access Services
+Authors@R: 
+    person("Pramit", "Ghosh", , "pramit.ghosh@external.eumetsat.int", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-1852-5951"))
+Description: This package acts as an R client for interacting with EUMETSAT's Data Access Services.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    base64enc,
+    httr
+URL: https://pramitghosh.github.io/REUMDAC/
