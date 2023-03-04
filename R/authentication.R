@@ -10,19 +10,22 @@
 #' @export
 #'
 #' @importFrom base64enc base64encode
-#' @importFrom httr POST
+#' @import httr
 #' 
 #' @examples
-#' authenticate("consumer_key_goes_here", "consumer_secret_goes_here")
+#' if(FALSE)
+#' {
+#'   authenticate("consumer_key_goes_here", "consumer_secret_goes_here")
+#' }
 #' 
 authenticate = function(consumer_key, consumer_secret)
 {
   str = base64enc::base64encode(charToRaw(paste(consumer_key, consumer_secret, sep = ":")))
   endpoint = "https://api.eumetsat.int/token"
-  token = httr::POST(endpoint, add_headers(Authorization = paste("Basic", str, sep = " ")), body = list(grant_type = "client_credentials"), encode = "form")
+  token = httr::POST(endpoint, httr::add_headers(Authorization = paste("Basic", str, sep = " ")), body = list(grant_type = "client_credentials"), encode = "form")
   
   if(token$status_code != 200)
     return(NULL)
   
-  return(content(token)$access_token)
+  return(httr::content(token)$access_token)
 }
