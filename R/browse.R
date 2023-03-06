@@ -11,10 +11,11 @@
 #' 
 #' @import httr
 #' @import sf
+#' @importFrom rnaturalearth ne_countries
 #' @export
 #'
 #' @examples
-#' footprint("ALTHRV", 5)
+#' footprint("ALTHRV", -50)
 #' footprint("NOMSCN", 0, returnPolygon = FALSE, plotPolygon = TRUE)
 #' 
 footprint = function(sensorMode, subSatelliteLongitude, returnPolygon = TRUE, plotPolygon = FALSE)
@@ -43,10 +44,12 @@ footprint = function(sensorMode, subSatelliteLongitude, returnPolygon = TRUE, pl
   
   if(plotPolygon == TRUE)
   {
-    # print("Plotting polygon...")
-    world = st_transform(ne_countries(scale = "medium", returnclass = "sf"), crs = 4326)
-    plot(st_geometry(world), axes = TRUE)
-    plot(st_geometry(sf_polygon), border = "red", add = TRUE)
+    if(requireNamespace("rnaturalearth", quietly = TRUE))
+    {
+      world = st_transform(rnaturalearth::ne_countries(scale = "medium", returnclass = "sf"), crs = 4326)
+      plot(st_geometry(world), axes = TRUE)
+      plot(st_geometry(sf_polygon), border = "red", add = TRUE)
+    } else print("Namespace for 'rnaturalearth' not found; aborting plotting!")
   }
   
   if(returnPolygon == TRUE)

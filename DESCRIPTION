@@ -14,3 +14,5 @@ Imports:
     httr,
     sf
 URL: https://pramitghosh.github.io/REUMDAC/
+Suggests: 
+    rnaturalearth
