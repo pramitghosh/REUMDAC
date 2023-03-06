@@ -12,6 +12,5 @@ RoxygenNote: 7.2.3
 Imports: 
     base64enc,
     httr,
-    mapview,
     sf
 URL: https://pramitghosh.github.io/REUMDAC/

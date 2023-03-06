@@ -11,7 +11,6 @@
 #' 
 #' @import httr
 #' @import sf
-#' @importFrom mapview mapview mapviewOptions
 #' @export
 #'
 #' @examples
@@ -45,8 +44,9 @@ footprint = function(sensorMode, subSatelliteLongitude, returnPolygon = TRUE, pl
   if(plotPolygon == TRUE)
   {
     # print("Plotting polygon...")
-    mapview::mapviewOptions(fgb = FALSE)
-    mapview::mapview(sf_polygon)
+    world = st_transform(ne_countries(scale = "medium", returnclass = "sf"), crs = 4326)
+    plot(st_geometry(world), axes = TRUE)
+    plot(st_geometry(sf_polygon), border = "red", add = TRUE)
   }
   
   if(returnPolygon == TRUE)
