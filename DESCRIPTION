@@ -12,7 +12,6 @@ RoxygenNote: 7.2.3
 Imports: 
     base64enc,
     httr,
+    rnaturalearth,
     sf
 URL: https://pramitghosh.github.io/REUMDAC/
-Suggests: 
-    rnaturalearth

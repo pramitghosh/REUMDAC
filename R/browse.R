@@ -44,12 +44,9 @@ footprint = function(sensorMode, subSatelliteLongitude, returnPolygon = TRUE, pl
   
   if(plotPolygon == TRUE)
   {
-    if(requireNamespace("rnaturalearth", quietly = TRUE))
-    {
-      world = st_transform(rnaturalearth::ne_countries(scale = "medium", returnclass = "sf"), crs = 4326)
-      plot(st_geometry(world), axes = TRUE)
-      plot(st_geometry(sf_polygon), border = "red", add = TRUE)
-    } else print("Namespace for 'rnaturalearth' not found; aborting plotting!")
+    world = st_transform(rnaturalearth::ne_countries(scale = "medium", returnclass = "sf"), crs = 4326)
+    plot(st_geometry(world), axes = TRUE)
+    plot(st_geometry(sf_polygon), border = "red", add = TRUE)
   }
   
   if(returnPolygon == TRUE)

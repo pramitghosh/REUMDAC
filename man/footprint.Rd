@@ -27,7 +27,7 @@ If returnPolygon is TRUE then a sf polygon else the response as an R list
 GEO products do not have an individual footprint. Instead, this resource represents a GEO footprint for the respective sensor mode and sub satellite longitude.
 }
 \examples{
-footprint("ALTHRV", 5)
+footprint("ALTHRV", -50)
 footprint("NOMSCN", 0, returnPolygon = FALSE, plotPolygon = TRUE)
 
 }
