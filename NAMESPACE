@@ -2,5 +2,9 @@
 
 export(authenticate)
 export(discover)
+export(footprint)
 import(httr)
+import(sf)
 importFrom(base64enc,base64encode)
+importFrom(mapview,mapview)
+importFrom(mapview,mapviewOptions)

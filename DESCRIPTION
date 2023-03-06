@@ -11,5 +11,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Imports: 
     base64enc,
-    httr
+    httr,
+    mapview,
+    sf
 URL: https://pramitghosh.github.io/REUMDAC/
