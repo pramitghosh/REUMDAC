@@ -77,16 +77,22 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">footprint</span><span class="op">(</span><span class="st">"ALTHRV"</span>, <span class="fl">5</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">footprint</span><span class="op">(</span><span class="st">"ALTHRV"</span>, <span class="op">-</span><span class="fl">50</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 1 feature and 0 fields</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: POLYGON</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: -74.39671 ymin: -80.49672 xmax: 84.39671 ymax: 81.00798</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: -129.3967 ymin: -80.49672 xmax: 29.39671 ymax: 81.00798</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   st_sfc.st_polygon.list.coordinates....crs...4326.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                    POLYGON ((0.44746 81.00798,...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                    POLYGON ((-54.55254 81.0079...</span>
 <span class="r-in"><span><span class="fu">footprint</span><span class="op">(</span><span class="st">"NOMSCN"</span>, <span class="fl">0</span>, returnPolygon <span class="op">=</span> <span class="cn">FALSE</span>, plotPolygon <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in ne_countries(scale = "medium", returnclass = "sf"):</span> could not find function "ne_countries"</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> The rnaturalearthdata package needs to be installed.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Installing the rnaturalearthdata package.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Installing package into ‘/home/runner/work/_temp/Library’</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> (as ‘lib’ is unspecified)</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in value[[3L]](cond):</span> Failed to install the rnaturalearthdata package.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span>  Please try installing the package for yourself using the following command: </span>
+<span class="r-err co"><span class="r-pr">#&gt;</span>  install.packages("rnaturalearthdata")</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
