@@ -8,10 +8,11 @@ Description: This package acts as an R client for interacting with EUMETSAT's Da
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Imports: 
     base64enc,
     httr,
     rnaturalearth,
+    rnaturalearthdata,
     sf
 URL: https://pramitghosh.github.io/REUMDAC/

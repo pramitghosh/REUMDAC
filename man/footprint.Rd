@@ -6,7 +6,7 @@
 \usage{
 footprint(
   sensorMode,
-  subSatelliteLongitude,
+  subSatelliteLongitude = 0,
   returnPolygon = TRUE,
   plotPolygon = FALSE
 )
@@ -14,7 +14,7 @@ footprint(
 \arguments{
 \item{sensorMode}{Sensor Mode; one of: {ALTHRV, REDSCN, NOMSCN}}
 
-\item{subSatelliteLongitude}{Sub Satellite longitude in degrees}
+\item{subSatelliteLongitude}{Sub Satellite longitude in degrees (defaults to 0 degrees)}
 
 \item{returnPolygon}{TRUE if a polygon should be returned; FALSE to return the response}
 
@@ -28,6 +28,6 @@ GEO products do not have an individual footprint. Instead, this resource represe
 }
 \examples{
 footprint("ALTHRV", -50)
-footprint("NOMSCN", 0, returnPolygon = FALSE, plotPolygon = TRUE)
+footprint("NOMSCN", returnPolygon = FALSE, plotPolygon = TRUE)
 
 }

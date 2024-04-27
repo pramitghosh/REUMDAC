@@ -3,7 +3,7 @@
 #' GEO products do not have an individual footprint. Instead, this resource represents a GEO footprint for the respective sensor mode and sub satellite longitude.
 #'
 #' @param sensorMode Sensor Mode; one of: {ALTHRV, REDSCN, NOMSCN}
-#' @param subSatelliteLongitude Sub Satellite longitude in degrees
+#' @param subSatelliteLongitude Sub Satellite longitude in degrees (defaults to 0 degrees)
 #' @param returnPolygon TRUE if a polygon should be returned; FALSE to return the response
 #' @param plotPolygon if the polygon is to be plotted
 #'
@@ -11,14 +11,15 @@
 #' 
 #' @import httr
 #' @import sf
+#' @import rnaturalearthdata
 #' @importFrom rnaturalearth ne_countries
 #' @export
 #'
 #' @examples
 #' footprint("ALTHRV", -50)
-#' footprint("NOMSCN", 0, returnPolygon = FALSE, plotPolygon = TRUE)
+#' footprint("NOMSCN", returnPolygon = FALSE, plotPolygon = TRUE)
 #' 
-footprint = function(sensorMode, subSatelliteLongitude, returnPolygon = TRUE, plotPolygon = FALSE)
+footprint = function(sensorMode, subSatelliteLongitude = 0, returnPolygon = TRUE, plotPolygon = FALSE)
 {
   # curl -X 'GET' \
   # 'https://api.eumetsat.int/data/browse/footprints/{sensorMode}/{subSatelliteLongitude}' \
@@ -44,9 +45,18 @@ footprint = function(sensorMode, subSatelliteLongitude, returnPolygon = TRUE, pl
   
   if(plotPolygon == TRUE)
   {
+    sf_use_s2(TRUE)
+    crs_string = paste("+proj=laea +lat_0=0 +lon_0", subSatelliteLongitude, sep = '=')
+    laea = st_crs(crs_string) # Lambert equal area
+    
     world = st_transform(rnaturalearth::ne_countries(scale = "medium", returnclass = "sf"), crs = 4326)
-    plot(st_geometry(world), axes = TRUE)
-    plot(st_geometry(sf_polygon), border = "red", add = TRUE)
+    world_s2 = st_transform(world, laea)
+    sf_polygon_s2 = st_transform(sf_polygon, laea)
+    
+    bb = st_bbox(sf_polygon_s2)
+    
+    plot(st_geometry(world_s2), col = "grey", xlim = c(bb[1], bb[3]), ylim = c(bb[2], bb[4]), axes = FALSE)
+    plot(st_geometry(sf_polygon_s2), border = "red", add = TRUE)
   }
   
   if(returnPolygon == TRUE)
