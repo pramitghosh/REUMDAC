@@ -27,9 +27,11 @@ footprint = function(sensorMode, subSatelliteLongitude = 0, returnPolygon = TRUE
   
   baseURL = "https://api.eumetsat.int/"
   path = paste("data/browse/footprints", sensorMode, subSatelliteLongitude, sep = "/")
-  response = GET(baseURL,
+  response = httr::GET(baseURL,
               path = path,
-              add_headers(accept = "application/json"))
+              add_headers(accept = "application/json"),
+              authenticator(return_header = TRUE))
+              
   
   if(response$status_code != 200)
     return(NULL)
@@ -66,3 +68,4 @@ footprint = function(sensorMode, subSatelliteLongitude = 0, returnPolygon = TRUE
   
   return(content(response))
 }
+
