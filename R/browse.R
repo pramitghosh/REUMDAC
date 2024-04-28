@@ -29,15 +29,21 @@ footprint = function(sensorMode, subSatelliteLongitude = 0, returnPolygon = TRUE
   baseURL = "https://api.eumetsat.int/"
   path = paste("data/browse/footprints", sensorMode, subSatelliteLongitude, sep = "/")
   
-  if(authenticated == TRUE)
-    response = httr::GET(baseURL,
-                path = path,
-                add_headers(accept = "application/json"),
-                authenticator(return_header = TRUE))
-  else
-    response = httr::GET(baseURL,
-                         path = path,
-                         add_headers(accept = "application/json"))
+  response = call_API(httr::GET,
+                      baseURL,
+                      path = path,
+                      add_headers(accept = "application/json"),
+                      authenticated = authenticated)
+  
+  # if(authenticated == TRUE)
+  #   response = httr::GET(baseURL,
+  #               path = path,
+  #               add_headers(accept = "application/json"),
+  #               authenticator(return_header = TRUE))
+  # else
+  #   response = httr::GET(baseURL,
+  #                        path = path,
+  #                        add_headers(accept = "application/json"))
   
   if(response$status_code != 200)
     return(NULL)
@@ -99,17 +105,24 @@ collections = function(collID = NULL, authenticated = TRUE)
     baseURL = "https://api.eumetsat.int/"
     path = paste("data/browse/collections")
     
-    if(authenticated == TRUE)
-      response = httr::GET(baseURL,
-                           path = path,
-                           query = list(format = "json"),
-                           httr::add_headers(accept = "application/json"),
-                           authenticator(return_header = TRUE))
-    else
-      response = httr::GET(baseURL,
-                           path = path,
-                           query = list(format = "json"),
-                           httr::add_headers(accept = "application/json"))
+    response = call_API(httr::GET,
+                        baseURL,
+                        path = path,
+                        query = list(format = "json"),
+                        httr::add_headers(accept = "application/json"),
+                        authenticated = authenticated)
+    
+    # if(authenticated == TRUE)
+    #   response = httr::GET(baseURL,
+    #                        path = path,
+    #                        query = list(format = "json"),
+    #                        httr::add_headers(accept = "application/json"),
+    #                        authenticator(return_header = TRUE))
+    # else
+    #   response = httr::GET(baseURL,
+    #                        path = path,
+    #                        query = list(format = "json"),
+    #                        httr::add_headers(accept = "application/json"))
     
     print(paste('Found ', httr::content(response)$numberOfProducts, ' products.'))
     return(httr::content(response))
