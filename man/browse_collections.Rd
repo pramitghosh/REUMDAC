@@ -4,10 +4,12 @@
 \alias{browse_collections}
 \title{Queries the collections endpoint}
 \usage{
-browse_collections(collID = NULL, authenticated = TRUE)
+browse_collections(collID = NULL, prodID = NULL, authenticated = TRUE)
 }
 \arguments{
 \item{collID}{Collection ID}
+
+\item{prodID}{Product ID}
 
 \item{authenticated}{whether to send authenticated API requests (defaults to TRUE)}
 }
@@ -20,4 +22,5 @@ Queries the appropriate \verb{collections/} endpoint depending on the arguments 
 \examples{
 browse_collections(authenticated = FALSE)
 browse_collections('EO:EUM:DAT:MSG:HRSEVIRI', authenticated = FALSE)
+browse_collections('EO:EUM:DAT:MSG:HRSEVIRI', 'MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA', authenticated = FALSE)
 }

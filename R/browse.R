@@ -78,6 +78,7 @@ footprint = function(sensorMode, subSatelliteLongitude = 0, returnPolygon = TRUE
 #'
 #' @param collID Collection ID
 #' @param authenticated whether to send authenticated API requests (defaults to TRUE)
+#' @param prodID Product ID
 #'
 #' @return A list with information about collection(s) and the number of products available
 #' 
@@ -87,7 +88,8 @@ footprint = function(sensorMode, subSatelliteLongitude = 0, returnPolygon = TRUE
 #' @examples
 #' browse_collections(authenticated = FALSE)
 #' browse_collections('EO:EUM:DAT:MSG:HRSEVIRI', authenticated = FALSE)
-browse_collections = function(collID = NULL, authenticated = TRUE)
+#' browse_collections('EO:EUM:DAT:MSG:HRSEVIRI', 'MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA', authenticated = FALSE)
+browse_collections = function(collID = NULL, prodID = NULL, authenticated = TRUE)
 {
   # curl -X 'GET' \
   # 'https://api.eumetsat.int/data/browse/1.0.0/collections?format=json' \
@@ -117,22 +119,45 @@ browse_collections = function(collID = NULL, authenticated = TRUE)
   }
   else
   {
-    path = paste("data/browse/collections", utils::URLencode(collID, reserved = TRUE), sep = "/")
-    
-    response = call_API(httr::GET,
-                        baseURL,
-                        path = path,
-                        query = list(format = "json"),
-                        httr::add_headers(accept = "application/json"),
-                        authenticated = authenticated)
-    
-    if(response$status_code != 200)
+    if(is.null(prodID))
     {
-      print(paste('API request failed with code', response$status_code, sep = ' '))
-      return(NULL)
+      path = paste("data/browse/collections", utils::URLencode(collID, reserved = TRUE), sep = "/")
+      
+      response = call_API(httr::GET,
+                          baseURL,
+                          path = path,
+                          query = list(format = "json"),
+                          httr::add_headers(accept = "application/json"),
+                          authenticated = authenticated)
+      
+      if(response$status_code != 200)
+      {
+        print(paste('API request failed with code', response$status_code, sep = ' '))
+        return(NULL)
+      }
+      
+      return(httr::content(response))
     }
-    
-    return(httr::content(response))
+    else
+    {
+      path = paste("data/browse/collections", utils::URLencode(collID, reserved = TRUE),
+                   'products', utils::URLencode(prodID, reserved = TRUE), sep = "/")
+      
+      response = call_API(httr::GET,
+                          baseURL,
+                          path = path,
+                          query = list(format = "json"),
+                          httr::add_headers(accept = "application/json"),
+                          authenticated = authenticated)
+      
+      if(response$status_code != 200)
+      {
+        print(paste('API request failed with code', response$status_code, sep = ' '))
+        return(NULL)
+      }
+      
+      return(httr::content(response))
+    }
   }
 }
 
