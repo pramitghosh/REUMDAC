@@ -29,7 +29,7 @@ authenticator = function(consumer_key = NULL, consumer_secret = NULL, save_creds
   if(is.null(consumer_key) || is.null(consumer_secret))
   {
     print('Credentials not provided; attempting to read from file')
-    cred_vals = utils::read.csv(path, header = FALSE)
+    cred_vals = suppressWarnings(utils::read.csv(path, header = FALSE))
     # print(cred_vals)
     consumer_key = as.character(cred_vals[1])
     consumer_secret = as.character(cred_vals[2])
