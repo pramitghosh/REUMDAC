@@ -75,3 +75,44 @@ footprint = function(sensorMode, subSatelliteLongitude = 0, returnPolygon = TRUE
   return(content(response))
 }
 
+
+#' Queries the collections endpoint
+#' 
+#' Queries the appropriate `collections/` endpoint depending on the arguments passed to it.
+#'
+#' @param collID Collection ID
+#' @param authenticated whether to send authenticated API requests (defaults to TRUE)
+#'
+#' @return A list with information about collection(s) and the number of products available
+#' @export
+#'
+#' @examples
+#' collections(authenticated = FALSE)
+collections = function(collID = NULL, authenticated = TRUE)
+{
+  if(is.null(collID))
+  {
+    # curl -X 'GET' \
+    # 'https://api.eumetsat.int/data/browse/1.0.0/collections?format=json' \
+    # -H 'accept: text/html'
+    
+    baseURL = "https://api.eumetsat.int/"
+    path = paste("data/browse/collections")
+    
+    if(authenticated == TRUE)
+      response = httr::GET(baseURL,
+                           path = path,
+                           query = list(format = "json"),
+                           httr::add_headers(accept = "application/json"),
+                           authenticator(return_header = TRUE))
+    else
+      response = httr::GET(baseURL,
+                           path = path,
+                           query = list(format = "json"),
+                           httr::add_headers(accept = "application/json"))
+    
+    print(paste('Found ', httr::content(response)$numberOfProducts, ' products.'))
+    return(httr::content(response))
+  }
+}
+
