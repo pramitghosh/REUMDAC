@@ -42,13 +42,17 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">browse_collections</span><span class="op">(</span>collID <span class="op">=</span> <span class="cn">NULL</span>, authenticated <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">browse_collections</span><span class="op">(</span>collID <span class="op">=</span> <span class="cn">NULL</span>, prodID <span class="op">=</span> <span class="cn">NULL</span>, authenticated <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>collID</dt>
 <dd><p>Collection ID</p></dd>
+
+
+<dt>prodID</dt>
+<dd><p>Product ID</p></dd>
 
 
 <dt>authenticated</dt>
@@ -65,7 +69,7 @@
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">browse_collections</span><span class="op">(</span>authenticated <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Found  28657330  products."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Found  28658614  products."</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[1]]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[1]]$type</span>
@@ -87,7 +91,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[1]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 252830</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 252833</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[2]]</span>
@@ -202,7 +206,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[6]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 15518</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 15530</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[7]]</span>
@@ -271,7 +275,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[9]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 67933</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 67967</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[10]]</span>
@@ -294,7 +298,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[10]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1508395</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1508404</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[11]]</span>
@@ -363,7 +367,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[13]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 121801</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 121802</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[14]]</span>
@@ -409,7 +413,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[15]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 19217</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 19221</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[16]]</span>
@@ -570,7 +574,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[22]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 34772</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 34786</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[23]]</span>
@@ -593,7 +597,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[23]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 35612</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 35613</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[24]]</span>
@@ -616,7 +620,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[24]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 24164</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 24168</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[25]]</span>
@@ -639,7 +643,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[25]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 34583</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 34597</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[26]]</span>
@@ -662,7 +666,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[26]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 685541</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 685561</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[27]]</span>
@@ -731,7 +735,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[29]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 15529</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 15538</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[30]]</span>
@@ -961,7 +965,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[39]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 736139</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 736143</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[40]]</span>
@@ -1053,7 +1057,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[43]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 32282</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 32285</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[44]]</span>
@@ -1076,7 +1080,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[44]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 559667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 559686</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[45]]</span>
@@ -1237,7 +1241,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[51]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1401092</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1401102</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[52]]</span>
@@ -1329,7 +1333,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[55]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 51753</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 51756</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[56]]</span>
@@ -1398,7 +1402,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[58]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 745943</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 745946</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[59]]</span>
@@ -1421,7 +1425,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[59]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 253092</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 253095</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[60]]</span>
@@ -1467,7 +1471,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[61]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 28724</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 28727</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[62]]</span>
@@ -1513,7 +1517,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[63]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 41918</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 41925</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[64]]</span>
@@ -1536,7 +1540,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[64]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 507728</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 507746</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[65]]</span>
@@ -1559,7 +1563,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[65]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1205752</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1205785</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[66]]</span>
@@ -1582,7 +1586,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[66]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 685575</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 685595</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[67]]</span>
@@ -1812,7 +1816,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[76]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 11358</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 11359</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[77]]</span>
@@ -1927,7 +1931,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[81]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 96299</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 96300</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[82]]</span>
@@ -1950,7 +1954,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[82]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 149407</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 149409</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[83]]</span>
@@ -2180,7 +2184,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[92]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 24178</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 24182</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[93]]</span>
@@ -2226,7 +2230,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[94]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 15526</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 15538</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[95]]</span>
@@ -2249,7 +2253,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[95]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 11360</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 11361</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[96]]</span>
@@ -2272,7 +2276,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[96]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 115474</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 115475</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[97]]</span>
@@ -2295,7 +2299,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[97]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 154635</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 154636</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[98]]</span>
@@ -2318,7 +2322,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/details"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[98]]$numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 154635</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 154636</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[99]]</span>
@@ -2438,7 +2442,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $numberOfProducts</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 28657330</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 28658614</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="fu">browse_collections</span><span class="op">(</span><span class="st">'EO:EUM:DAT:MSG:HRSEVIRI'</span>, authenticated <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $collection</span>
@@ -2578,6 +2582,174 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $links[[2]]$rel</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collection/osdd"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span><span class="fu">browse_collections</span><span class="op">(</span><span class="st">'EO:EUM:DAT:MSG:HRSEVIRI'</span>, <span class="st">'MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA'</span>, authenticated <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $type</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Feature"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geometry</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> named list()</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$identifier</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$parentIdentifier</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "EO:EUM:DAT:MSG:HRSEVIRI"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2024-04-28T16:15:10.059Z/2024-04-28T16:27:42.422Z"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$updated</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2024-04-28T16:28:50.29Z"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$acquisitionInformation</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$acquisitionInformation[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$acquisitionInformation[[1]]$platform</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$acquisitionInformation[[1]]$platform$platformShortName</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "MSG3"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$acquisitionInformation[[1]]$instrument</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$acquisitionInformation[[1]]$instrument$instrumentShortName</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "SEVIRI"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$acquisitionInformation[[1]]$acquisitionParameters</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> named list()</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$productInformation</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$productInformation$productType</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "MSG15"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$productInformation$size</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 170959</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$extraInformation</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$extraInformation$md5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "eec99ce06dc35ce806881cc9471142b6"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$type</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Links"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$data</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$data[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$data[[1]]$type</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Link"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$data[[1]]$href</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI/products/MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$data[[1]]$mediaType</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "application/zip"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$data[[1]]$title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Product download"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$alternates</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$alternates[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$alternates[[1]]$type</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Link"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$alternates[[1]]$href</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI/products/MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA/metadata"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$alternates[[1]]$mediaType</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "application/xml"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$alternates[[1]]$title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Metadata"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$alternates[[2]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$alternates[[2]]$type</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Link"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$alternates[[2]]$href</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI/products/MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA/metadata?format=json"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$alternates[[2]]$mediaType</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "application/json"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$alternates[[2]]$title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Metadata in JSON format"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$up</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$up[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$up[[1]]$type</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Link"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$up[[1]]$href</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://api.eumetsat.int/data/browse/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI?format=json"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$up[[1]]$mediaType</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "application/json"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$up[[1]]$title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Collection"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[1]]$type</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Link"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[1]]$href</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI/products/MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA/entry?name=manifest.xml"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[1]]$mediaType</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "application/xml"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[1]]$title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "manifest.xml"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[2]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[2]]$type</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Link"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[2]]$href</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI/products/MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA/entry?name=MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA.nat"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[2]]$mediaType</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "application/octet-stream"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[2]]$title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA.nat"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[3]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[3]]$type</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Link"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[3]]$href</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI/products/MSG3-SEVI-MSG15-0100-NA-20240428162742.422000000Z-NA/entry?name=EOPMetadata.xml"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[3]]$mediaType</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "application/xml"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $properties$links$`sip-entries`[[3]]$title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "EOPMetadata.xml"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
