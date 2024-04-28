@@ -6,6 +6,7 @@
 #' @param subSatelliteLongitude Sub Satellite longitude in degrees (defaults to 0 degrees)
 #' @param returnPolygon TRUE if a polygon should be returned; FALSE to return the response
 #' @param plotPolygon if the polygon is to be plotted
+#' @param authenticated whether to send authenticated API requests (defaults to TRUE)
 #'
 #' @return If returnPolygon is TRUE then a sf polygon else the response as an R list
 #' 
@@ -16,10 +17,10 @@
 #' @export
 #'
 #' @examples
-#' footprint("ALTHRV", -50)
-#' footprint("NOMSCN", returnPolygon = FALSE, plotPolygon = TRUE)
+#' footprint("ALTHRV", -50, authenticated = FALSE)
+#' footprint("NOMSCN", returnPolygon = FALSE, plotPolygon = TRUE, authenticated = FALSE)
 #' 
-footprint = function(sensorMode, subSatelliteLongitude = 0, returnPolygon = TRUE, plotPolygon = FALSE)
+footprint = function(sensorMode, subSatelliteLongitude = 0, returnPolygon = TRUE, plotPolygon = FALSE, authenticated = TRUE)
 {
   # curl -X 'GET' \
   # 'https://api.eumetsat.int/data/browse/footprints/{sensorMode}/{subSatelliteLongitude}' \
@@ -27,11 +28,16 @@ footprint = function(sensorMode, subSatelliteLongitude = 0, returnPolygon = TRUE
   
   baseURL = "https://api.eumetsat.int/"
   path = paste("data/browse/footprints", sensorMode, subSatelliteLongitude, sep = "/")
-  response = httr::GET(baseURL,
-              path = path,
-              add_headers(accept = "application/json"),
-              authenticator(return_header = TRUE))
-              
+  
+  if(authenticated == TRUE)
+    response = httr::GET(baseURL,
+                path = path,
+                add_headers(accept = "application/json"),
+                authenticator(return_header = TRUE))
+  else
+    response = httr::GET(baseURL,
+                         path = path,
+                         add_headers(accept = "application/json"))
   
   if(response$status_code != 200)
     return(NULL)
